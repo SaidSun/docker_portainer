@@ -1,0 +1,12 @@
+# Local secrets and machine-specific settings
+esp8266_exporter/config.h
+stack/.env
+
+# Generated files and temporary build data
+_build/
+__pycache__/
+*.py[cod]
+
+# Local IDE/editor files
+.vscode/
+.idea/

@@ -1,0 +1,36 @@
+logging {
+  level  = "info"
+  format = "logfmt"
+}
+
+prometheus.scrape "smartctl" {
+  targets = [
+    {
+      "__address__" = "smartctl-exporter:9633",
+      "job"         = "smartctl-exporter",
+    },
+  ]
+
+  scrape_interval = "15s"
+  forward_to      = [prometheus.remote_write.victoria.receiver]
+}
+
+prometheus.scrape "esp8266" {
+  targets = [
+    {
+      "__address__" = sys.env("ESP8266_IP") + ":80",
+      "job"         = "esp8266",
+    },
+  ]
+
+  metrics_path    = "/metrics"
+  scrape_interval = "15s"
+  scrape_timeout  = "5s"
+  forward_to      = [prometheus.remote_write.victoria.receiver]
+}
+
+prometheus.remote_write "victoria" {
+  endpoint {
+    url = "http://victoria-metrics:8428/api/v1/write"
+  }
+}
