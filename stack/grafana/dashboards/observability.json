@@ -21,7 +21,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "#FF1744",
+                  "color": "#3A3A45",
                   "value": null
                 },
                 {
@@ -36,14 +36,14 @@
             {
               "options": {
                 "0": {
-                  "color": "#FF1744",
+                  "color": "#3A3A45",
                   "index": 0,
-                  "text": "Недоступен"
+                  "text": "●"
                 },
                 "1": {
                   "color": "#D500F9",
                   "index": 1,
-                  "text": "Доступен"
+                  "text": "●"
                 }
               },
               "type": "value"
@@ -56,14 +56,14 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 6,
-        "w": 24,
+        "h": 4,
+        "w": 3,
         "x": 0,
         "y": 0
       },
       "id": 1,
       "options": {
-        "colorMode": "background_solid",
+        "colorMode": "value",
         "graphMode": "none",
         "justifyMode": "center",
         "orientation": "auto",
@@ -74,16 +74,16 @@
           "fields": "",
           "values": false
         },
-        "textMode": "value_and_name"
+        "textMode": "value"
       },
       "targets": [
         {
           "expr": "up{job=\"esp8266\"}",
-          "legendFormat": "ESP8266",
+          "legendFormat": "",
           "refId": "A"
         }
       ],
-      "title": "Доступность ESP8266",
+      "title": "ESP8266",
       "type": "stat"
     },
     {
@@ -126,10 +126,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 10,
-        "w": 12,
-        "x": 0,
-        "y": 6
+        "h": 14,
+        "w": 10,
+        "x": 3,
+        "y": 0
       },
       "id": 2,
       "options": {
@@ -199,10 +199,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 10,
-        "w": 12,
-        "x": 12,
-        "y": 6
+        "h": 14,
+        "w": 11,
+        "x": 13,
+        "y": 0
       },
       "id": 3,
       "options": {
@@ -231,7 +231,7 @@
       "type": "timeseries"
     }
   ],
-  "refresh": "15s",
+  "refresh": "5s",
   "schemaVersion": 41,
   "tags": [
     "esp8266",
@@ -249,5 +249,5 @@
   "timezone": "browser",
   "title": "ESP8266: температура и влажность",
   "uid": "docker-observability-lab",
-  "version": 3
+  "version": 4
 }

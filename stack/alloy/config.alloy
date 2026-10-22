@@ -24,7 +24,7 @@ prometheus.scrape "esp8266" {
   ]
 
   metrics_path    = "/metrics"
-  scrape_interval = "15s"
+  scrape_interval = "5s"
   scrape_timeout  = "5s"
   forward_to      = [prometheus.remote_write.victoria.receiver]
 }
