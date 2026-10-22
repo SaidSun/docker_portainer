@@ -10,3 +10,19 @@ __pycache__/
 # Local IDE/editor files
 .vscode/
 .idea/
+
+# Local reports, archives and generated evidence
+*.pdf
+*.docx
+*.zip
+*.tar.gz
+screenshots/
+smartctl_exporter_build/
+build_docker_reports.py
+build_report1_docx.py
+capture_docker_screenshots.py
+email_draft.txt
+image-manifest.txt
+RUNBOOK_LINUX.md
+RUNBOOK_WINDOWS.md
+START.md
